@@ -8,8 +8,9 @@ import { Todo } from '../models/todo';
 })
 export class TodoService {
 
-  apiUrl="https://jsonplaceholder.typicode.com/todos";
-  constructor(private httpClient:HttpClient) { }
+  apiUrl = 'https://jsonplaceholder.typicode.com/todos';
+
+  constructor(private httpClient: HttpClient) { }
 
   getTodos():Observable<Todo[]> {
     return this.httpClient.get<Todo[]>(this.apiUrl);
